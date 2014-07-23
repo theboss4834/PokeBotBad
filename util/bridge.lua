@@ -1,15 +1,21 @@
 local bridge = {}
 
 local utils = require("util.utils")
+local socket = require("socket")
+local memory = require "util.memory"
 
 local client = nil
 local timeStopped = false
+local lastSecs = 0
+local lastMins = 0
+local lastHours = 0
+local frames = 0
 
 local function send(prefix, body)
 	if (client) then
 		local message = prefix
 		if (body) then
-			message = message..","..body
+			message = message.." "..body
 		end
 		client:send(message..'\n')
 		return true
@@ -32,43 +38,73 @@ end
 -- Wrapper functions
 
 function bridge.init()
+	print("Bridge initializing")
+	client = socket.connect("localhost", 16834)
+	print("Bridge initialized")
 end
 
 function bridge.tweet(message) -- Two of the same tweet in a row will only send one
 	print('tweet::'..message)
-	return send("tweet", message)
+	-- return send("tweet", message)
+	return true
 end
 
 function bridge.pollForName()
 	bridge.polling = true
-	send("poll_name")
+	-- send("poll_name")
 end
 
 function bridge.chat(message, extra)
+	print("Bridge Chat")
 	if (extra) then
 		print(message.." || "..extra)
 	else
 		print(message)
 	end
-	return send("msg", message)
+	-- return send("msg", message)
+	return true
 end
 
-function bridge.time(message)
+function bridge.time()
 	if (not timeStopped) then
-		return send("time", message)
+		local seconds = memory.raw(0xDA44)
+		local minutes = memory.raw(0xDA43)
+		local hours = memory.raw(0xDA41)
+
+		if (hours ~= lastHours or minutes ~= lastMinutes or seconds ~= lastSeconds) then
+			frames = 0
+			lastSeconds = seconds
+			lastMinutes = minutes
+			lastHours = hours
+		end
+		seconds = seconds + frames / 60
+
+		if (seconds < 10) then
+			seconds = "0"..seconds
+		end
+		if (minutes < 10) then
+			minutes = "0"..minutes
+		end
+		local message = hours..":"..minutes..":"..seconds
+		send("setgametime", message)
+		frames = frames + 1
 	end
 end
 
 function bridge.stats(message)
-	return send("stats", message)
+	print("Bridge Stats")
+	-- return send("stats", message)
+	return true
 end
 
 function bridge.command(command)
-	return send("livesplit_command", command)
+	print("Bridge Command")
+	return send(command)
 end
 
 function bridge.comparisonTime()
-	return send("livesplit_getcomparisontime")
+	print("Bridge Comparison Time")
+	return send("getcomparisonsplittime")
 end
 
 function bridge.process()
@@ -84,25 +120,28 @@ function bridge.process()
 end
 
 function bridge.input(key)
-	send("input", key)
+	-- send("input", key)
 end
 
 function bridge.caught(name)
 	if (name) then
-		send("caught", name)
+		-- send("caught", name)
 	end
 end
 
 function bridge.hp(curr, max)
-	send("hp", curr..","..max)
+	-- send("hp", curr..","..max)
 end
 
 function bridge.liveSplit()
-	send("start")
+	print("Bridge Start Timer")
+	send("pausegametime")
+	send("starttimer")
 	timeStopped = false
 end
 
 function bridge.split(encounters, finished)
+	print("Bridge Split")
 	if (encounters) then
 		-- database.split(utils.igt(), encounters)
 	end
@@ -113,15 +152,17 @@ function bridge.split(encounters, finished)
 end
 
 function bridge.encounter()
-	send("encounter")
+	-- send("encounter")
 end
 
 function bridge.reset()
+	print("Bridge Reset")
 	send("reset")
 	timeStopped = false
 end
 
 function bridge.close()
+	print("Bridge closing")
 	if client then
 		client:close()
 		client = nil

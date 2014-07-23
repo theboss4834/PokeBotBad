@@ -96,7 +96,7 @@ end
 -- Execute
 
 print("Welcome to PokeBot "..GAME_NAME.." version "..VERSION)
-local productionMode = not walk.init() and false
+local productionMode = not walk.init()
 if (CUSTOM_SEED) then
 	client.reboot_core()
 else
@@ -143,6 +143,7 @@ while true do
 				choosePlayerNames()
 			end
 		else
+			bridge.time()
 			local battleState = memory.value("game", "battle")
 			if (battleState > 0) then
 				if (battleState == 1) then
