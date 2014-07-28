@@ -35,7 +35,7 @@ function paint.draw(currentMap)
 			hpStatus = "RED"
 		end
 		if (hpStatus) then
-			gui.text(120, 7, hpStatus)
+			-- gui.text(120, 7, hpStatus)
 		end
 	end
 

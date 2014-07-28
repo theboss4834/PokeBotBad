@@ -38,9 +38,9 @@ end
 -- Wrapper functions
 
 function bridge.init()
-	print("Bridge initializing")
+	-- print("Bridge initializing")
 	client = socket.connect("localhost", 16834)
-	print("Bridge initialized")
+	-- print("Bridge initialized")
 end
 
 function bridge.tweet(message) -- Two of the same tweet in a row will only send one
@@ -55,7 +55,7 @@ function bridge.pollForName()
 end
 
 function bridge.chat(message, extra)
-	print("Bridge Chat")
+	-- print("Bridge Chat")
 	if (extra) then
 		print(message.." || "..extra)
 	else
@@ -92,18 +92,18 @@ function bridge.time()
 end
 
 function bridge.stats(message)
-	print("Bridge Stats")
+	-- print("Bridge Stats")
 	-- return send("stats", message)
 	return true
 end
 
 function bridge.command(command)
-	print("Bridge Command")
+	-- print("Bridge Command")
 	return send(command)
 end
 
 function bridge.comparisonTime()
-	print("Bridge Comparison Time")
+	-- print("Bridge Comparison Time")
 	return send("getcomparisonsplittime")
 end
 
@@ -134,14 +134,14 @@ function bridge.hp(curr, max)
 end
 
 function bridge.liveSplit()
-	print("Bridge Start Timer")
+	-- print("Bridge Start Timer")
 	send("pausegametime")
 	send("starttimer")
 	timeStopped = false
 end
 
 function bridge.split(encounters, finished)
-	print("Bridge Split")
+	-- print("Bridge Split")
 	if (encounters) then
 		-- database.split(utils.igt(), encounters)
 	end
@@ -156,18 +156,18 @@ function bridge.encounter()
 end
 
 function bridge.reset()
-	print("Bridge Reset")
+	-- print("Bridge Reset")
 	send("reset")
 	timeStopped = false
 end
 
 function bridge.close()
-	print("Bridge closing")
+	-- print("Bridge closing")
 	if client then
 		client:close()
 		client = nil
 	end
-	print("Bridge closed")
+	-- print("Bridge closed")
 end
 
 return bridge
