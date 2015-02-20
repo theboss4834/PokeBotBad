@@ -870,6 +870,20 @@ strategyFunctions = {
 		end
 		walk.step(px, py)
 	end,
+	
+	grabForestPotion = function()
+		if (inventory.contains("potion")) then
+			if (pokemon.info("squirtle", "hp") <= 10) then
+				if (menu.pause()) then
+					inventory.use("potion", "squirtle")
+				end
+			else
+				return true
+			end
+		elseif (menu.close()) then
+			player.interact("Up")
+		end
+	end,
 
 	fightWeedle = function()
 		if (battle.isTrainer()) then
