@@ -123,16 +123,6 @@ while true do
 		previousMap = currentMap
 	end
 	
-	if (strategies.frames) then
-		if (memory.value("game", "battle") == 0) then
-			strategies.frames = strategies.frames + 1
-		end
-		gui.text(0, 80, strategies.frames)
-	end
-	if (bridge.polling) then
-		pollForResponse()
-	end
-	
 	if (not input.update()) then
 		if (not utils.ingame()) then
 			if (currentMap == 0) then
