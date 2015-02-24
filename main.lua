@@ -9,7 +9,7 @@ local PAINT_ON		= true -- Displays contextual information while the bot runs
 -- Start code (hard hats on)
 
 local START_WAIT = 99
-local VERSION = "1.2"
+local VERSION = "1.3"
 
 local battle = require "action.battle"
 local textbox = require "action.textbox"
@@ -58,7 +58,7 @@ end
 local function choosePlayerNames()
 	local name
 	if (memory.value("player", "name2") == 80) then
-		name = "W"
+		name = "E"
 	else
 		name = "B"
 	end
@@ -122,6 +122,17 @@ while true do
 		input.clear()
 		previousMap = currentMap
 	end
+	
+	if (strategies.frames) then
+		if (memory.value("game", "battle") == 0) then
+			strategies.frames = strategies.frames + 1
+		end
+		gui.text(0, 80, strategies.frames)
+	end
+	if (bridge.polling) then
+		pollForResponse()
+	end
+	
 	if (not input.update()) then
 		if (not utils.ingame()) then
 			if (currentMap == 0) then

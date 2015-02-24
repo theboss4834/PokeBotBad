@@ -25,8 +25,10 @@ local areaName
 local nidoAttack, nidoSpeed, nidoSpecial = 0, 0, 0
 local squirtleAtt, squirtleDef, squirtleSpd, squirtleScl
 local deepRun, resetting
-local level4Nidoran = true
-local skipHiker, yolo, riskGiovanni, maxEtherSkip
+local level4Nidoran = true-- 57 vs 96 (d39)
+local yolo, riskGiovanni, maxEtherSkip
+
+-- Reset cutoff times
 
 local timeRequirements = {
 	mankey = function()
@@ -400,6 +402,9 @@ local function nidoranDSum(disabled)
 				-- tries = {0, 0, 10} -- TODO can't escape
 			end
 		elseif (opName == "spearow") then
+			if (opLevel == 5) then
+				-- can't escape
+			end
 		elseif (opName == "nidoran") then
 			tries = {0, 6, 12}
 		elseif (opName == "nidoranf") then
@@ -471,8 +476,20 @@ strategyFunctions = {
 
 	tweetMisty = function()
 		local elt = paint.elapsedTime()
-		setYolo("misty")
-		print("Misty: "..elt)
+		if (setYolo("misty")) then
+			print("Misty: "..elt)
+		else
+			local timeReq = 40
+			if (pokemon.inParty("paras")) then
+				timeReq = timeReq + 0.75
+			end
+			timeReq = timeReq - 1.75
+			local pbn = "!"
+			if (not overMinute(timeReq)) then
+				pbn = " (PB pace)"
+			end
+			bridge.tweet("Got a run going, just beat Misty "..elt.." in"..pbn.." http://www.twitch.tv/thepokebot")
+		end
 		return true
 	end,
 
@@ -1219,10 +1236,7 @@ strategyFunctions = {
 	startMtMoon = function()
 		strategies.moonEncounters = 0
 		strategies.canDie = nil
-		skipHiker = nidoAttack > 15 -- RISK or level4Nidoran
-		if (skipHiker) then
-			control.mtMoonExp()
-		end
+	
 		return true
 	end,
 
@@ -1250,26 +1264,7 @@ strategyFunctions = {
 		end
 	end,
 
-	teachWaterGun = function()
-		if (battle.handleWild()) then
-			if (not pokemon.inParty("nidorino")) then
-				print("")
-				print("")
-				print("")
-				print("")
-				print("")
-				return reset("Did not evolve to Nidorino", pokemon.info("nidoran", "level"))
-			end
-			return strategyFunctions.teach({move="water_gun",replace="tackle"})
-		end
-	end,
-
-	fightHiker = function()
-		if (skipHiker) then
-			return true
-		end
-		return strategyFunctions.interact({dir="Left"})
-	end,
+	
 
 	evolveNidoking = function()
 		if (battle.handleWild()) then
@@ -1324,9 +1319,6 @@ strategyFunctions = {
 
 		local timeLimit = 26
 		if (nidoAttack > 15 and nidoSpeed > 14) then
-			timeLimit = timeLimit + 0.25
-		end
-		if (not skipHiker) then
 			timeLimit = timeLimit + 0.25
 		end
 		if (pokemon.inParty("paras")) then
@@ -1439,7 +1431,8 @@ strategyFunctions = {
 				local def = pokemon.index(0, "defense")
 				local spd = pokemon.index(0, "speed")
 				local scl = pokemon.index(0, "special")
-				local statDesc = att.." "..def.." "..spd.." "..scl
+				local elt = paint.elapsedTime()
+				local statDesc ="Att:" ..att.." Def: "..def.." Spd: "..spd.." Scl: "..scl.." In "..elt
 				nidoAttack = att
 				nidoSpeed = spd
 				nidoSpecial = scl
@@ -1482,6 +1475,25 @@ strategyFunctions = {
 		else
 			textbox.handle()
 		end
+	end,
+	
+	thrashGeodude = function()
+		if (battle.isActive()) then
+			canProgress = true
+			if (pokemon.isOpponent("geodude") and pokemon.isDeployed("nidoking")) then
+				local sacrifice = pokemon.inParty("squirtle")
+				if (sacrifice and pokemon.info(sacrifice, "hp") > 0) then
+					battle.swap(sacrifice)
+					return false
+				end
+			end
+			battle.automate()
+		elseif (canProgress) then
+			return true
+		else
+			textbox.handle()
+		end
+
 	end,
 
 	potionBeforeGoldeen = function()
