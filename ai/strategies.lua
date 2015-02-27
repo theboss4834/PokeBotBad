@@ -488,14 +488,14 @@ strategyFunctions = {
 			if (not overMinute(timeReq)) then
 				pbn = " (PB pace)"
 			end
-			bridge.tweet("Got a run going, just beat Misty "..elt.." in"..pbn.." http://www.twitch.tv/thepokebot")
+			bridge.tweet("Got a run going, just beat Misty "..elt.." in"..pbn.." http://www.twitch.tv/pokespeedrunbots")
 		end
 		return true
 	end,
 
 	tweetVictoryRoad = function()
 		local elt = paint.elapsedTime()
-		bridge.tweet("Entering Victory Road at "..elt.." on our way to the Elite Four! http://www.twitch.tv/thepokebot")
+		bridge.tweet("Entering Victory Road at "..elt.." on our way to the Elite Four! http://www.twitch.tv/pokespeedrunbots")
 		return true
 	end,
 
@@ -1857,7 +1857,6 @@ strategyFunctions = {
 		end
 		if (nidoAttack >= 54 and nidoSpecial >= minSpecial) then
 			riskGiovanni = true
-			print("Giovanni skip strats!")
 		end
 
 		local xspecAmt = 4
