@@ -2,12 +2,12 @@ PokéBot
 =======
 An automated computer program that speedruns Pokémon.
 
-Pokémon Red Any%: [1:51:11](https://www.youtube.com/watch?v=M4pOlQ-mIoc) (23 June 2014)
+Pokémon Red Any%: [1:50:56](http://puu.sh/g5cVT/a27b0db200.png) (19 Feb 2015)
 
 Watch Live
 ==========
-### [http://www.twitch.tv/thepokebot](http://www.twitch.tv/thepokebot)
-PokéBot's official streaming channel on Twitch. Consider following there to find out when we're streaming, or follow the [Twitter feed](https://twitter.com/thepokebot) for announcements when we get personal best pace runs going.
+### [http://www.twitch.tv/pokespeedrunbots](http://www.twitch.tv/pokespeedrunbots)
+PokéBot's official streaming channel on Twitch. Consider following there to find out when we're streaming.
 
 Try it out
 ==========
