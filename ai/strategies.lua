@@ -1084,7 +1084,7 @@ strategyFunctions = {
 								superlative = " min stat"
 								exclaim = "."
 							end
-							nStatus = "Beat Brock with a"..superlative.." Nidoran"..exclaim.." "..nStatus
+							nStatus = "Beat Brock with a"..superlative.." Nidoran"..exclaim.." "..nStatus.." Seed:" ..strategies.seed
 							bridge.chat(nStatus)
 						else
 							tries = tries + 1
