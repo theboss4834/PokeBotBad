@@ -172,6 +172,10 @@ while true do
 			else
 				inBattle = false
 			end
+			if (RESET_FOR_TIME) then 
+				local timeLimit = 125
+				strategies.resetTime(timeLimit, "beat the game :( !!!", true) -- This fixes the problem of the game being stuck at any point, if it goes over 2:05h it resets!
+			end
 			local currentHP = pokemon.index(0, "hp")
 			if (currentHP == 0 and not strategies.canDie and pokemon.index(0) > 0) then
 				strategies.death(currentMap)

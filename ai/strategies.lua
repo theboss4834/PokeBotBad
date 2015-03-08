@@ -156,6 +156,7 @@ local function resetTime(timeLimit, reason, once)
 		end
 	end
 end
+strategies.resetTime = resetTime
 
 local function getTimeRequirement(name)
 	return timeRequirements[name]()
