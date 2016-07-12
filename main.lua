@@ -9,7 +9,7 @@ local PAINT_ON     = true -- Display contextual information while the bot runs
 
 -- START CODE (hard hats on)
 
-VERSION = "2.2"
+VERSION = "2.3"
 
 local Data = require "data.data"
 
@@ -67,10 +67,10 @@ p("Welcome to PokeBot "..Utils.capitalize(Data.gameName).." version "..VERSION, 
 
 Control.init()
 client.speedmode(350)
-STREAMING_MODE = not Walk.init()
+STREAMING_MODE = true
 
 if CUSTOM_SEED then
-	resetAll()
+	Strategies.reboot()
 else
 	hasAlreadyStartedPlaying = Utils.ingame()
 end
@@ -99,6 +99,7 @@ end
 
 local function generateNextInput(currentMap)
 	if not Utils.ingame() then
+		Bridge.pausegametime()
 		if currentMap == 0 then
 			if running then
 				if not hasAlreadyStartedPlaying then
@@ -118,6 +119,7 @@ local function generateNextInput(currentMap)
 			Settings.choosePlayerNames()
 		end
 	else
+		Bridge.time()
 		local battleState = Memory.value("game", "battle")
 		Control.encounter(battleState)
 

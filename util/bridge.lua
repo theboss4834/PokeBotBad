@@ -4,19 +4,19 @@ local Utils = require "util.utils"
 
 local json = require "external.json"
 
-local socket
-if INTERNAL then
-	socket = require "socket"
-end
+local socket = require "socket"
+local memory = require "util.memory"
 
 local client = nil
 local timeStopped = true
+local timeMin = 0
+local timeFrames = 0
 
 local function send(prefix, body)
 	if client then
 		local message = prefix
 		if body then
-			message = message..","..body
+			message = message.." "..body
 		end
 		client:send(message.."\n")
 		return true
@@ -41,7 +41,7 @@ end
 function Bridge.init(gameName)
 	if socket then
 		-- io.popen("java -jar Main.jar")
-		client = socket.connect("127.0.0.1", 13378)
+		client = socket.connect("localhost", 16834)
 		if client then
 			client:settimeout(0.005)
 			client:setoption("keepalive", true)
@@ -56,14 +56,15 @@ end
 
 function Bridge.tweet(message)
 	if STREAMING_MODE then
-		print("tweet::"..message)
-		return send("tweet", message)
+		--print("tweet::"..message)
+		--send("tweet", message)
+		return true
 	end
 end
 
 function Bridge.pollForName()
 	Bridge.polling = true
-	send("poll_name")
+	--send("poll_name")
 end
 
 function Bridge.chatRandom(...)
@@ -78,25 +79,45 @@ function Bridge.chat(message, suppressed, extra, newLine)
 			p(message, newLine)
 		end
 	end
-	return send("msg", message)
+	--return send("msg", message)
+	return true
 end
 
-function Bridge.time(message)
-	if not timeStopped then
-		return send("time", message)
+function Bridge.time()
+	if (not timeStopped) then
+		local frames = memory.raw(0x1A45)
+		local seconds = memory.raw(0x1A44)
+		local minutes = memory.raw(0x1A43)
+		local hours = memory.raw(0x1A41)
+
+		if (frames == timeFrames) then
+			local seconds2 = seconds + (frames / 60)
+			local message = hours..":"..minutes..":"..seconds2
+			send("setgametime", message)
+			if timeFrames == 59 then
+				timeFrames = 0
+			else
+				timeFrames = (frames + 1)
+			end
+		end
+
+		send("unpausegametime")
 	end
 end
 
 function Bridge.stats(message)
-	return send("stats", message)
+	--return send("stats", message)
+	return true
 end
 
 function Bridge.command(command)
-	return send("livesplit_command", command);
+	print("Bridge Command")
+	return send(command)
 end
 
 function Bridge.comparisonTime()
-	return send("livesplit_getcomparisontime");
+	print("Bridge Comparison Time")
+	return send("getcomparisonsplittime")
 end
 
 function Bridge.process()
@@ -110,21 +131,25 @@ function Bridge.process()
 end
 
 function Bridge.input(key)
-	send("input", key)
+	--send("input", key)
 end
 
 function Bridge.caught(name)
 	if name then
-		send("caught", name)
+		--send("caught", name)
 	end
 end
 
 function Bridge.hp(curr_hp, max_hp, curr_xp, max_xp, level)
-	send("hpxp", curr_hp..","..max_hp..","..curr_xp..","..max_xp..","..level)
+	--send("hpxp", curr_hp..","..max_hp..","..curr_xp..","..max_xp..","..level)
 end
 
+
 function Bridge.liveSplit()
-	send("start")
+	print("Bridge Start Timer")
+	send("initgametime")
+	send("pausegametime")
+	send("starttimer")
 	timeStopped = false
 end
 
@@ -135,8 +160,12 @@ function Bridge.split(finished)
 	send("split")
 end
 
+function Bridge.pausegametime()
+	send("pausegametime")
+end
+
 function Bridge.encounter()
-	send("encounter")
+	--send("encounter")
 end
 
 function Bridge.report(report)
