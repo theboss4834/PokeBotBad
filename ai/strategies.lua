@@ -41,6 +41,17 @@ function Strategies.getTimeRequirement(name)
 	end
 end
 
+function Strategies.reboot()
+	if emu.framecount() >= 120 then
+		client.pause()
+		joypad.set({["Power"] = true})
+		client.unpause()
+		return
+	else
+		return
+	end
+end
+
 function Strategies.hardReset(reason, message, extra, wait)
 	resetting = true
 	if Data.run.seed then
@@ -70,7 +81,7 @@ function Strategies.hardReset(reason, message, extra, wait)
 	if wait and INTERNAL and not STREAMING_MODE then
 		strategyFunctions.wait()
 	else
-		client.reboot_core()
+		Strategies.reboot()
 	end
 	return true
 end

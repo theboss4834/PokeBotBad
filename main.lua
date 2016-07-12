@@ -9,7 +9,7 @@ local PAINT_ON     = true -- Display contextual information while the bot runs
 
 -- START CODE (hard hats on)
 
-VERSION = "2.1"
+VERSION = "2.2"
 
 local Data = require "data.data"
 
@@ -39,7 +39,7 @@ local previousMap
 
 -- HELPERS
 
-local function resetAll()
+function resetAll()
 	Strategies.softReset()
 	Combat.reset()
 	Control.reset()
@@ -60,16 +60,17 @@ local function resetAll()
 	math.randomseed(Data.run.seed)
 end
 
+
 -- EXECUTE
 
 p("Welcome to PokeBot "..Utils.capitalize(Data.gameName).." version "..VERSION, true)
 
 Control.init()
-
+client.speedmode(350)
 STREAMING_MODE = not Walk.init()
 
 if CUSTOM_SEED then
-	client.reboot_core()
+	resetAll()
 else
 	hasAlreadyStartedPlaying = Utils.ingame()
 end
@@ -92,6 +93,8 @@ else
 	end
 end
 
+
+
 -- LOOP
 
 local function generateNextInput(currentMap)
@@ -99,7 +102,7 @@ local function generateNextInput(currentMap)
 		if currentMap == 0 then
 			if running then
 				if not hasAlreadyStartedPlaying then
-					if emu.framecount() == 1 then client.reboot_core() end
+					if emu.framecount() ~= 1 then Strategies.reboot() end
 					hasAlreadyStartedPlaying = true
 				else
 					resetAll()
