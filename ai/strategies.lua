@@ -625,7 +625,11 @@ Strategies.functions = {
 
 	tweetBrock = function()
 		local statRequirement, timeRequirement
-		if Data.yellow then
+		if stats.nidoran.rating == nil then
+			statRequirement = 3
+			timeRequirement = "shorts"
+			p("Something Fucked up! Should not be here!")
+		elseif Data.yellow then
 			statRequirement = Pokemon.inParty("pidgey") and stats.nidoran.attack == 16 or stats.nidoran.speed == 15 --TODO
 			timeRequirement = "brock"
 		else
