@@ -74,7 +74,7 @@ end
 function Bridge.chat(message, suppressed, extra, newLine)
 	if not suppressed then
 		if extra then
-			p(message.." || "..extra, newLine)
+			p(message.." | "..extra, newLine)
 		else
 			p(message, newLine)
 		end
@@ -146,7 +146,7 @@ end
 
 
 function Bridge.liveSplit()
-	print("Bridge Start Timer")
+	-- print("Bridge Start Timer")
 	send("initgametime")
 	send("pausegametime")
 	send("starttimer")

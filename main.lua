@@ -9,7 +9,7 @@ local PAINT_ON     = true -- Display contextual information while the bot runs
 
 -- START CODE (hard hats on)
 
-VERSION = "2.3"
+VERSION = "2.4"
 
 local Data = require "data.data"
 
@@ -55,7 +55,7 @@ function resetAll()
 		p("RUNNING WITH A FIXED SEED ("..NIDORAN_NAME.." "..Data.run.seed.."), every run will play out identically!", true)
 	else
 		Data.run.seed = os.time()
-		print("PokeBot v"..VERSION..": "..(BEAST_MODE and "BEAST MODE seed" or "starting a new run with seed").." "..Data.run.seed)
+		print("PokeBot v"..VERSION..": "..(BEAST_MODE and "BEAST MODE seed" or "Seed:").." "..Data.run.seed)
 	end
 	math.randomseed(Data.run.seed)
 end
@@ -63,7 +63,7 @@ end
 
 -- EXECUTE
 
-p("Welcome to PokeBot "..Utils.capitalize(Data.gameName).." version "..VERSION, true)
+p("Welcome to PokeBot "..Utils.capitalize(Data.gameName).." v"..VERSION, true)
 
 Control.init()
 client.speedmode(350)

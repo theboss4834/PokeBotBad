@@ -16,6 +16,7 @@ local Menu = require "util.menu"
 local Player = require "util.player"
 local Shop = require "action.shop"
 local Utils = require "util.utils"
+local json = require "external.json"
 
 local Inventory = require "storage.inventory"
 local Pokemon = require "storage.pokemon"
@@ -62,10 +63,20 @@ function Strategies.hardReset(reason, message, extra, wait)
 		end
 	end
 
+	local seed = Data.run.seed
+	local newmessage = message.." | "..seed
+
+	local f,  err = io.open("C:/Users/rjrhy/Desktop/Pokebot/Github work/PokeBotBad/wiki/red/runs.txt", "a")
+	if f==nil then
+		print("Couldn't open file: "..err)
+	else
+		f:write(newmessage.."\n")
+		f:close()
+	end
+
 	local map, px, py = Memory.value("game", "map"), Player.position()
 	Data.reset(reason, Control.areaName, map, px, py, stats)
-
-	Bridge.chat(message, false, extra)
+	Bridge.chat(message, false, extra, true)
 
 	if Strategies.elite4Reason then
 		Bridge.guessResults("elite4", Strategies.elite4Reason)
@@ -88,16 +99,16 @@ end
 
 function Strategies.reset(reason, explanation, extra, wait)
 	local time = Utils.elapsedTime()
-	local resetMessage = "reset"
-	if time then
-		resetMessage = resetMessage.." after "..time
-	end
+	local resetMessage = "Reset"
 	resetMessage = resetMessage.." at "..Control.areaName
+	if time then
+		resetMessage = resetMessage.." | "..time
+	end
 	local separator
 	if Strategies.deepRun and not Control.yolo then
 		separator = " BibleThump"
 	else
-		separator = ":"
+		separator = " | "
 	end
 	resetMessage = resetMessage..separator.." "..explanation.."."
 
@@ -187,7 +198,7 @@ function Strategies.tweetProgress(message, progress)
 		Strategies.updates[progress] = true
 		message = message.." Pokemon "..Utils.capitalize(Data.gameName).." http://www.twitch.tv/thepokebot"
 	end
-	Bridge.tweet(message)
+	-- Bridge.tweet(message)
 	return true
 end
 
@@ -1212,7 +1223,7 @@ Strategies.functions = {
 			specialDV = sclDV,
 		}
 		Bridge.stats(att.." "..def.." "..spd.." "..scl)
-		Bridge.chat("is checking Nidoran's stats at level 8... "..att.." attack, "..def.." defense, "..spd.." speed, "..scl.." special.")
+		Bridge.chat("Stats: "..att.." attack, "..def.." defense, "..spd.." speed, "..scl.." special.")
 
 		local resetsForStats = att < 15 or spd < 14 or scl < 12
 		local restrictiveStats = not Data.yellow and RESET_FOR_TIME
