@@ -9,7 +9,7 @@ local PAINT_ON     = true -- Display contextual information while the bot runs
 
 -- START CODE (hard hats on)
 
-VERSION = "2.4.3"
+VERSION = "2.4.4"
 
 local Data = require "data.data"
 
