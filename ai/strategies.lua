@@ -1299,7 +1299,7 @@ Strategies.functions = {
 		if Data.yellow then
 			message = "caught"
 		else
-			message = "beat Brock with"
+			message = "Beat Brock with"
 		end
 		message = message.." a"..superlative.." Nidoran"..exclaim
 

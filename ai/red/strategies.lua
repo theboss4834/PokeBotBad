@@ -123,7 +123,7 @@ Strategies.timeRequirements = {
 		if BEAST_MODE then
 			return 45.75
 		end
-		return 46.25 + timeForStats()
+		return 47.25 + timeForStats()
 	end,
 
 	safari_carbos = function()
@@ -131,7 +131,7 @@ Strategies.timeRequirements = {
 	end,
 
 	victory_road = function() --PB
-		return 96.67
+		return 97.3
 	end,
 
 	e4center = function()
@@ -143,7 +143,7 @@ Strategies.timeRequirements = {
 	end,
 
 	champion = function() --PB
-		return 109.133
+		return 112
 	end,
 
 }
@@ -564,6 +564,10 @@ end
 strategyFunctions.shopPewterMart = function()
 	local potions = 10
 	local pokeballs = Inventory.count("pokeball")
+	if stats.nidoran.rating == nil then
+		p("Game failed to read memory")
+		Strategies.reset("Memory", "Game messed up reading memory")
+	end
 	if pokeballs < (Pokemon.inParty("spearow") and 2 or 3) then
 		pokeballs = pokeballs + 1
 		if not Inventory.contains("potion") then
