@@ -1077,6 +1077,12 @@ Strategies.functions = {
 		return Strategies.useItem(data)
 	end,
 
+	speedchange = function(data)
+		p(data.extra..", speed changed too "..data.speed.."%")
+		client.speedmode(data.speed)
+		return true
+	end,
+
 	-- ROUTE
 
 	squirtleIChooseYou = function()
