@@ -1,8 +1,12 @@
 local Utils = {}
 
 local Memory = require "util.memory"
+local Strategies
+local Data = require "data.data"
 
 local EMP = 1
+local splitCheck = 0
+local splitNum = 1
 
 -- GLOBAL
 
@@ -24,6 +28,15 @@ function p(...)
 end
 
 -- GENERAL
+
+function Utils.reset()
+	splitCheck = 0
+	splitNum = 1
+end
+
+function Utils.splitUpdate()
+	splitNum = splitNum + 1
+end
 
 function Utils.dist(x1, y1, x2, y2)
 	return math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))
@@ -172,6 +185,30 @@ function Utils.elapsedTime()
 	local mins = Memory.value("time", "minutes")
 	local hours = Memory.value("time", "hours")
 	return hours..":"..clockSegment(mins)..":"..clockSegment(secs)
+end
+
+function Utils.timeToSplit(splitName)
+	local currTime = Utils.igt()
+	local splitTime = Strategies.getTimeRequirement(splitName) * 60
+	local diff = currTime - splitTime
+	return diff
+end
+
+function Utils.splitCheck()
+	local order = { "bulbasaur", "nidoran", "brock", "route3", "mt_moon", "mankey", "misty", "trash", "safari_carbos", "safari_carbos" , "safari_carbos", "victory_road", "victory_road", "victory_road", "victory_road", "victory_road", "e4center", "blue", "blue", "blue", "champion" }
+	if splitCheck == 600 then
+		local timediff = Utils.timeToSplit(order[splitNum])
+		if timediff >= 600 then
+			Strategies.reboot()
+		end
+		splitCheck = 0
+	else
+		splitCheck = splitCheck + 1
+	end
+end
+
+function Utils.init()
+	Strategies = require("ai."..Data.gameName..".strategies")
 end
 
 return Utils

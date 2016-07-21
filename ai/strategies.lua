@@ -66,7 +66,7 @@ function Strategies.hardReset(reason, message, extra, wait)
 	local seed = Data.run.seed
 	local newmessage = message.." | "..seed
 
-	local f,  err = io.open("C:/Users/rjrhy/Desktop/Pokebot/Github work/PokeBotBad/wiki/red/runs.txt", "a")
+	local f,  err = io.open(RUNS_FILE, "a")
 	if f==nil then
 		print("Couldn't open file: "..err)
 	else
@@ -1078,7 +1078,7 @@ Strategies.functions = {
 	end,
 
 	speedchange = function(data)
-		p(data.extra..", speed changed too "..data.speed.."%")
+		p(data.extra..", speed changed to "..data.speed.."%")
 		client.speedmode(data.speed)
 		return true
 	end,

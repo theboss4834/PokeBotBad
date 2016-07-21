@@ -83,12 +83,16 @@ Strategies.timeRequirements = {
 		return timeLimit
 	end,
 
+	route3 = function()
+		return 19 + timeSaveFor("spearow")
+	end,
+
 	mt_moon = function() --RESET
 		if BEAST_MODE then
 			return 24.75
 		end
 
-		local timeLimit = 25.25 + timeSaveFor("paras")
+		local timeLimit = 25.50 + timeSaveFor("paras")
 		if Pokemon.info("nidoking", "level") >= 18 then
 			timeLimit = timeLimit + 0.33
 		elseif Pokemon.getExp() > 3730 then
@@ -566,7 +570,7 @@ strategyFunctions.shopPewterMart = function()
 	local pokeballs = Inventory.count("pokeball")
 	if stats.nidoran.rating == nil then
 		p("Game failed to read memory")
-		Strategies.reset("Memory", "Game messed up reading memory")
+		Strategies.reset("Memory", "Oops, forgot to switch to nidoran, now not right level!")
 	end
 	if pokeballs < (Pokemon.inParty("spearow") and 2 or 3) then
 		pokeballs = pokeballs + 1

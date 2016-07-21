@@ -6,13 +6,15 @@ BEAST_MODE = false -- WARNING: Do not engage. Will yolo everything, and reset at
 INITIAL_SPEED = 750
 AFTER_BROCK_SPEED = 350
 
+RUNS_FILE = "C:/Users/rjrhy/Desktop/Pokebot/Github work/PokeBotBad/wiki/red/runs.txt" -- Use / insted of \ otherwise it will not work
+
 local CUSTOM_SEED  = nil -- Set to a known seed to replay it, or leave nil for random runs
 local NIDORAN_NAME = "A" -- Set this to the single character to name Nidoran (note, to replay a seed, it MUST match!)
 local PAINT_ON     = true -- Display contextual information while the bot runs
 
 -- START CODE (hard hats on)
 
-VERSION = "2.4.5"
+VERSION = "2.4.6"
 
 local Data = require "data.data"
 
@@ -49,6 +51,7 @@ function resetAll()
 	Walk.reset()
 	Paint.reset()
 	Bridge.reset()
+	Utils.reset()
 	oldSeconds = 0
 	running = false
 	client.speedmode(INITIAL_SPEED)
@@ -70,6 +73,7 @@ end
 p("Welcome to PokeBot "..Utils.capitalize(Data.gameName).." v"..VERSION, true)
 
 Control.init()
+Utils.init()
 STREAMING_MODE = true
 
 if CUSTOM_SEED then
@@ -123,6 +127,7 @@ local function generateNextInput(currentMap)
 		end
 	else
 		Bridge.time()
+		Utils.splitCheck()
 		local battleState = Memory.value("game", "battle")
 		Control.encounter(battleState)
 
