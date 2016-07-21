@@ -55,7 +55,7 @@ Strategies.timeRequirements = {
 		if BEAST_MODE then
 			return 1.99
 		end
-		return 2.22
+		return 0.5
 	end,
 
 	nidoran = function() --RESET
@@ -88,7 +88,7 @@ Strategies.timeRequirements = {
 			return 24.75
 		end
 
-		local timeLimit = 25.25 + timeSaveFor("paras")
+		local timeLimit = 25.50 + timeSaveFor("paras")
 		if Pokemon.info("nidoking", "level") >= 18 then
 			timeLimit = timeLimit + 0.33
 		elseif Pokemon.getExp() > 3730 then

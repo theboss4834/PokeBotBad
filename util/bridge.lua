@@ -158,6 +158,7 @@ function Bridge.split(finished)
 		timeStopped = true
 	end
 	send("split")
+	-- Utils.splitUpdate()
 end
 
 function Bridge.pausegametime()

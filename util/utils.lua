@@ -1,8 +1,11 @@
 local Utils = {}
 
 local Memory = require "util.memory"
+local Strategies = require("ai.red.strategies")
 
 local EMP = 1
+local splitcheck = 0
+local splitNum = 1
 
 -- GLOBAL
 
@@ -173,5 +176,36 @@ function Utils.elapsedTime()
 	local hours = Memory.value("time", "hours")
 	return hours..":"..clockSegment(mins)..":"..clockSegment(secs)
 end
+
+function Utils.timeToSplit(splitName)
+	local currTime = Utils.igt()
+	local splitTime = Strategies.timeRequirements(splitName)
+	local diff = currTime - splitTime
+	return diff
+end
+
+function Utils.reset()
+	splitcheck = 0
+	splitNum = 1
+end
+
+function Utils.splitUpdate()
+	splitNum = splitNum + 1
+end
+
+function Utils.splitCheck()
+	local order = { "bulbasaur", "nidoran", "old_man", "forest", "brock", "shorts", "mt_moon", "mankey", "bills", "vermilion", "trash", "victory_road", "e4center", "blue", "champion" }
+	if splitcheck == 60 then
+		local timediff = Utils.timeToSplit(order[splitNum])
+		if timediff > 0.1 then
+			p("Something has gone wrong, Restarting...")
+			resetAll()
+		end
+		splitcheck = 0
+	else
+		splitcheck = splitcheck + 1
+	end
+end
+
 
 return Utils

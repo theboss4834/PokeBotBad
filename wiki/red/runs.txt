@@ -7,3 +7,222 @@ Reset at Brock's Gym | 0:10:32 |  Died. | 1468423103
 Reset at Nidoran grass | 0:07:07 |  Ran too low on Pokeballs. | 1468423180
 Reset at Brock's Gym | 0:11:11 |  Critical'd. | 1468423235
 Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468423322
+Reset at Pallet Rival | 0:02:05 |  Bad Squirtle - 10 attack, 11 special. | 1468516517
+Reset at Nidoran grass | 0:06:30 |  Took too long to catch Nidoran. | 1468516552
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468516599
+Reset at Nidoran grass | 0:06:28 |  Ran too low on Pokeballs. | 1468516735
+Reset at Pallet Rival | 0:01:44 |  Growled to death. | 1468516792
+Reset at Nidoran grass | 0:06:29 |  Death by Rattata. | 1468516809
+Reset at Nidoran grass | 0:06:25 |  Took too long to catch Nidoran. | 1468516859
+Reset at Pallet Rival | 0:01:39 |  Growled to death. | 1468516908
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468516923
+Reset at Mt. Moon | 0:27:17 |  Took too long to complete Mt. Moon. | 1468516942
+Reset at Pallet Rival | 0:02:08 |  Bad Squirtle - 10 attack, 11 special. | 1468517141
+Reset at Brock's Gym | 0:10:49 |  Bad Nidoran - unrunnable attack/speed combination. | 1468517162
+Reset at Brock's Gym | 0:11:13 |  Bad Nidoran - unrunnable speed. | 1468517239
+Reset at Pallet Rival | 0:01:45 |  Growled to death. | 1468517322
+Reset at Pallet Rival | 0:01:38 |  Growled to death. | 1468517339
+Reset at Pallet Rival | 0:01:51 |  Bad Squirtle - 10 attack, 11 special. | 1468517355
+Reset at Nidoran grass | 0:06:38 |  Took too long to catch Nidoran. | 1468517373
+Reset at Pallet Town | 0:05:35 |  Too many encounters. | 1468517424
+Reset at Brock's Gym | 0:10:58 |  Bad Nidoran - unrunnable attack. | 1468517465
+Reset at Pallet Rival | 0:02:15 |  Bad Squirtle - 10 attack, 11 special. | 1468517546
+Reset at Nidoran grass | 0:06:34 |  Took too long to catch Nidoran. | 1468517567
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468517616
+Reset at Brock's Gym | 0:10:58 |  Bad Nidoran - unrunnable speed. | 1468517637
+Reset at Pallet Rival | 0:01:37 |  Growled to death. | 1468517714
+Reset at Nidoran grass | 0:06:37 |  Took too long to catch Nidoran. | 1468517729
+Reset at Mt. Moon | 0:27:37 |  Took too long to complete Mt. Moon. | 1468517780
+Reset at Mt. Moon | 0:27:14 |  Took too long to complete Mt. Moon. | 1468518004
+Reset at Pallet Rival | 0:01:35 |  Growled to death. | 1468518211
+Reset at Brock's Gym | 0:11:10 |  Bad Nidoran - unrunnable attack, unrunnable special. | 1468518226
+Reset at Nidoran grass | 0:06:19 |  Took too long to catch Nidoran. | 1468518311
+Reset at Mt. Moon | 0:26:48 |  Took too long to complete Mt. Moon. | 1468518359
+Reset at Nidoran grass | 0:06:22 |  Death by Rattata. | 1468518574
+Reset at Brock's Gym | 0:10:16 |  Died. | 1468518634
+Reset at Nidoran grass | 0:06:23 |  Took too long to catch Nidoran. | 1468518707
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468518754
+Reset at Nidoran grass | 0:06:37 |  Took too long to catch Spearow. | 1468518774
+Reset at Pallet Rival | 0:01:44 |  Growled to death. | 1468518824
+Reset at Nidoran grass | 0:05:51 |  Ran too low on Pokeballs. | 1468518840
+Reset at Brock's Gym | 0:10:46 |  Yolo strats. | 1468518883
+Reset at Pallet Rival | 0:01:39 |  Growled to death. | 1468518961
+Reset at Pallet Rival | 0:02:03 |  Died. | 1468518977
+Reset at Brock's Gym | 0:11:20 |  Bad Nidoran - unrunnable speed. | 1468518996
+Reset at Brock's Gym | 0:10:45 |  Bad Nidoran - unrunnable attack, unrunnable special. | 1468519078
+Reset at Nidoran grass | 0:06:23 |  Death by Rattata. | 1468519155
+Reset at Nidoran grass | 0:06:35 |  Took too long to catch Nidoran. | 1468519203
+Reset at Nidoran grass | 0:06:34 |  Took too long to catch Nidoran. | 1468520115
+Reset at Nidoran grass | 0:06:29 |  Death by Rattata. | 1468520243
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468520345
+Reset at Pallet Rival | 0:01:56 |  Bad Squirtle - 10 attack, 11 special. | 1468520366
+Reset at Brock's Gym | 0:10:55 |  Bad Nidoran - unrunnable attack, unrunnable speed. | 1468520384
+Reset at Mt. Moon | 0:26:07 |  Took too long to complete Mt. Moon. | 1468520464
+Reset at Pallet Town | 0:05:30 |  Too many encounters. | 1468520658
+Reset at Pallet Town | 0:03:17 |  Too many encounters. | 1468520699
+Reset at Pallet Rival | 0:01:35 |  Growled to death. | 1468520726
+Reset at Nidoran grass | 0:06:25 |  Ran too low on Pokeballs. | 1468520742
+Reset at Pallet Town | 0:05:35 |  Too many encounters. | 1468520792
+Reset at Nidoran grass | 0:06:39 |  Ran too low on Pokeballs. | 1468520839
+Reset at Pallet Rival | 0:02:10 |  Bad Squirtle - 10 attack, 11 special. | 1468520894
+Reset at Pallet Rival | 0:01:56 |  Growled to death. | 1468520915
+Reset at Brock's Gym | 0:10:40 |  Bad Nidoran - unrunnable speed. | 1468520935
+Reset at Pallet Town | 0:03:24 |  Too many encounters. | 1468521018
+Reset at Brock's Gym | 0:11:07 |  Bad Nidoran - unrunnable attack, unrunnable speed. | 1468521046
+Reset at Pallet Town | 0:04:15 |  Too many encounters. | 1468521134
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468521168
+Reset at Pallet Rival | 0:01:43 |  Growled to death. | 1468521190
+Reset at Nidoran grass | 0:06:27 |  Death by Rattata. | 1468521206
+Reset at Nidoran grass | 0:06:27 |  Death by Rattata. | 1468521256
+Reset at Brock's Gym | 0:10:42 |  Bad Nidoran - unrunnable special. | 1468521305
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468521383
+Reset at Nidoran grass | 0:06:37 |  Took too long to catch Nidoran. | 1468521403
+Reset at Nidoran grass | 0:06:35 |  Took too long to catch Spearow. | 1468521457
+Reset at Brock's Gym | 0:11:13 |  Game messed up reading memory. | 1468521507
+Reset at Nidoran grass | 0:06:31 |  Ran too low on Pokeballs. | 1468521590
+Reset at Nidoran grass | 0:06:21 |  Death by Rattata. | 1468521640
+Reset at Nidoran grass | 0:06:21 |  Death by Rattata. | 1468521689
+Reset at Brock's Gym | 0:10:42 |  Bad Nidoran - unrunnable special. | 1468521737
+Reset at Nidoran grass | 0:06:32 |  Death by Rattata. | 1468521815
+Reset at Pallet Town | 0:05:37 |  Too many encounters. | 1468521865
+Reset at Nidoran grass | 0:06:49 |  Death by Rattata. | 1468521909
+Reset at Nidoran grass | 0:06:28 |  Death by Rattata. | 1468521963
+Reset at Brock's Gym | 0:10:38 |  Bad Nidoran - unrunnable attack/speed combination. | 1468522012
+Reset at Nidoran grass | 0:06:25 |  Took too long to catch Nidoran. | 1468522096
+Reset at Brock's Gym | 0:10:29 |  Bad Nidoran - unrunnable attack, unrunnable speed. | 1468522145
+Reset at Brock's Gym | 0:11:06 |  Bad Nidoran - unrunnable speed. | 1468522225
+Reset at Brock's Gym | 0:11:11 |  Yolo strats. | 1468522306
+Reset at Nidoran grass | 0:06:36 |  Took too long to catch Nidoran. | 1468522389
+Reset at Pallet Rival | 0:01:43 |  Growled to death. | 1468522447
+Reset at Brock's Gym | 0:10:56 |  Yolo strats. | 1468522464
+Reset at Nidoran grass | 0:06:49 |  Took too long to catch Nidoran. | 1468522556
+Reset at Brock's Gym | 0:11:33 |  Died. | 1468522607
+Reset at Pallet Town | 0:03:23 |  Too many encounters. | 1468522693
+Reset at Mt. Moon | 0:26:11 |  Took too long to complete Mt. Moon. | 1468522722
+Reset at Pallet Rival | 0:01:51 |  Growled to death. | 1468522935
+Reset at Pallet Rival | 0:01:50 |  Growled to death. | 1468522954
+Reset at Pallet Rival | 0:01:45 |  Growled to death. | 1468522972
+Reset at Brock's Gym | 0:10:56 |  Bad Nidoran - unrunnable attack/speed combination. | 1468522989
+Reset at Pallet Rival | 0:01:48 |  Growled to death. | 1468523073
+Reset at Brock's Gym | 0:11:30 |  Bad Nidoran - unrunnable speed. | 1468523091
+Reset at Pallet Rival | 0:01:50 |  Growled to death. | 1468523179
+Reset at Nidoran grass | 0:06:19 |  Took too long to catch Nidoran. | 1468523197
+Reset at Nidoran grass | 0:06:19 |  Took too long to catch Nidoran. | 1468523246
+Reset at Nidoran grass | 0:06:25 |  Death by Rattata. | 1468523292
+Reset at Mt. Moon | 0:26:33 |  Took too long to complete Mt. Moon. | 1468523339
+Reset at Mt. Moon | 0:27:27 |  Took too long to complete Mt. Moon. | 1468523537
+Reset at Brock's Gym | 0:10:35 |  Bad Nidoran - unrunnable attack. | 1468523763
+Reset at Nidoran grass | 0:06:51 |  Ran too low on Pokeballs. | 1468523847
+Reset at Nidoran grass | 0:06:25 |  Death by Rattata. | 1468523902
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468523955
+Reset at Nidoran grass | 0:06:29 |  Took too long to catch Nidoran. | 1468523977
+Reset at Nidoran grass | 0:05:57 |  Ran too low on Pokeballs. | 1468524034
+Reset at Nidoran grass | 0:06:34 |  Took too long to catch Spearow. | 1468524086
+Reset at Pallet Town | 0:03:24 |  Too many encounters. | 1468524137
+Reset at Shorts Kid | 0:14:26 |  Yolo strats. | 1468524167
+Reset at Nidoran grass | 0:06:56 |  Death by Rattata. | 1468524289
+Reset at Pallet Rival | 0:01:55 |  Bad Squirtle - 10 attack, 11 special. | 1468524350
+Reset at Brock's Gym | 0:10:24 |  Bad Nidoran - unrunnable speed. | 1468524370
+Reset at Brock's Gym | 0:10:53 |  Bad Nidoran - unrunnable attack. | 1468524452
+Reset at Pallet Town | 0:03:18 |  Too many encounters. | 1468524538
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468524567
+Reset at Pallet Town | 0:05:36 |  Too many encounters. | 1468524589
+Reset at Brock's Gym | 0:11:42 |  Bad Nidoran - unrunnable attack/speed combination, unrunnable special. | 1468524634
+Reset at Nidoran grass | 0:06:23 |  Death by Rattata. | 1468524727
+Reset at Pallet Rival | 0:01:44 |  Growled to death. | 1468524778
+Reset at Nidoran grass | 0:06:34 |  Took too long to catch Nidoran. | 1468524797
+Reset at Nidoran grass | 0:06:35 |  Took too long to catch Nidoran. | 1468524848
+Reset at Brock's Gym | 0:10:31 |  Bad Nidoran - unrunnable speed. | 1468524902
+Reset at Pallet Town | 0:03:08 |  Too many encounters. | 1468524984
+Reset at Brock's Gym | 0:10:59 |  Bad Nidoran - unrunnable attack, unrunnable special. | 1468525012
+Reset at Nidoran grass | 0:06:37 |  Took too long to catch Nidoran. | 1468525099
+Reset at Nidoran grass | 0:06:30 |  Took too long to catch Nidoran. | 1468525152
+Reset at Nidoran grass | 0:06:34 |  Took too long to catch Nidoran. | 1468525202
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468525254
+Reset at Brock's Gym | 0:11:02 |  Bad Nidoran - unrunnable attack/speed combination. | 1468525276
+Reset at Pallet Rival | 0:02:06 |  Bad Squirtle - 10 attack, 11 special. | 1468525363
+Reset at Brock's Gym | 0:11:02 |  Game messed up reading memory. | 1468525384
+Reset at Brock's Gym | 0:11:39 |  Bad Nidoran - unrunnable special. | 1468525468
+Reset at Lavender Town | 0:57:54 |  Died. | 1468451701
+Reset at Lavender Town | 0:57:54 |  Died. | 1468451701
+Reset at Vermilion City | 0:45:03 |  Died. | 1468539076
+Reset at Brock's Gym | 0:10:55 |  Bad Nidoran - unrunnable speed. | 1468539076
+Reset at Pallet Rival | 0:01:54 |  Growled to death. | 1468544245
+Reset at Nidoran grass | 0:06:26 |  Took too long to catch Nidoran. | 1468544267
+Back to the grind - you can follow on Twitter for updates on our next good run! https://twitter.com/thepokebot | 1468573432
+Back to the grind - you can follow on Twitter for updates on our next good run! https://twitter.com/thepokebot | 1468573432
+Reset at Pokemon Tower | 1:00:46 |  Critical'd. | 1468573243
+Reset at Pokemon Tower | 1:00:46 |  Critical'd. | 1468573243
+Reset at Pallet Rival | 0:01:43 |  Growled to death. | 1468710729
+Reset at Nidoran grass | 0:06:50 |  Took too long to catch Nidoran. | 1468710917
+Reset at Mt. Moon | 0:27:05 |  Took too long to complete Mt. Moon. | 1468762746
+Reset at Brock's Gym | 0:10:31 |  Bad Nidoran - perfect stats Kappa . | 1468763119
+Reset at Nidoran grass | 0:06:39 |  Took too long to catch Nidoran. | 1468763213
+Reset at Nidoran grass | 0:06:19 |  Death by Rattata. | 1468763274
+Reset at Nidoran grass | 0:06:39 |  Took too long to catch Spearow. | 1468763332
+Reset at Brock's Gym | 0:11:26 |  Game messed up reading memory. | 1468763393
+Reset at Nidoran grass | 0:06:11 |  Ran too low on Pokeballs. | 1468763498
+Reset at Brock's Gym | 0:10:56 |  Bad Nidoran - unrunnable speed. | 1468763557
+Reset at Brock's Gym | 0:10:52 |  Bad Nidoran - let's just forget this ever happened. | 1468763655
+Reset at Nidoran grass | 0:07:09 |  Took too long to catch Nidoran. | 1468763752
+Reset at Brock's Gym | 0:11:01 |  Bad Nidoran - unrunnable special. | 1468763818
+Reset at Nidoran grass | 0:06:38 |  Took too long to catch Nidoran. | 1468763916
+Reset at Brock's Gym | 0:10:58 |  Died. | 1468763978
+Reset at Brock's Gym | 0:10:22 |  Bad Nidoran - unrunnable attack. | 1468764075
+Reset at Nidoran grass | 0:06:38 |  Took too long to catch Nidoran. | 1468764169
+Reset at Mt. Moon | 0:27:35 |  Took too long to complete Mt. Moon. | 1468764233
+Reset at Pallet Town | 0:03:23 |  Too many encounters. | 1468764619
+Reset at Nidoran grass | 0:06:37 |  Took too long to catch Spearow. | 1468764653
+Reset at Brock's Gym | 0:10:50 |  Bad Nidoran - unrunnable attack, unrunnable special. | 1468764715
+Reset at Brock's Gym | 0:11:09 |  Bad Nidoran - unrunnable attack. | 1468764812
+Reset at Nidoran grass | 0:06:22 |  Took too long to catch Nidoran. | 1468764913
+Reset at Nidoran grass | 0:06:50 |  Died. | 1468764972
+Reset at Brock's Gym | 0:11:04 |  Bad Nidoran - unrunnable speed, unrunnable special. | 1468765039
+Reset at Nidoran grass | 0:06:38 |  Took too long to catch Nidoran. | 1468765139
+Reset at Nidoran grass | 0:06:19 |  Took too long to catch Nidoran. | 1468765201
+Reset at Pallet Rival | 0:01:41 |  Growled to death. | 1468765260
+Reset at Nidoran grass | 0:06:36 |  Took too long to catch Nidoran. | 1468765281
+Reset at Brock's Gym | 0:10:54 |  Yolo strats. | 1468765343
+Reset at Pokemon Tower | 0:59:40 |  Died. | 1468765439
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468766378
+Reset at Pallet Town | 0:05:20 |  Too many encounters. | 1468766403
+Reset at Mt. Moon | 0:26:36 |  Took too long to complete Mt. Moon. | 1468766454
+Reset at Brock's Gym | 0:11:09 |  Bad Nidoran - unrunnable special. | 1468766822
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468766922
+Reset at Nidoran grass | 0:06:34 |  Took too long to catch Nidoran. | 1468766948
+Reset at Brock's Gym | 0:10:50 |  Bad Nidoran - unrunnable speed. | 1468767009
+Reset at Brock's Gym | 0:10:51 |  Yolo strats. | 1468767105
+Reset at Pallet Rival | 0:02:07 |  Critical'd. | 1468767201
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468767227
+Reset at Route 3 | 0:13:06 |  Critical'd. | 1468767252
+Reset at Brock's Gym | 0:10:31 |  Bad Nidoran - unrunnable attack, unrunnable speed. | 1468767386
+Reset at Nidoran grass | 0:06:38 |  Took too long to catch Nidoran. | 1468767480
+Reset at Brock's Gym | 0:11:13 |  Bad Nidoran - unrunnable speed. | 1468767542
+Reset at Nidoran grass | 0:06:19 |  Too many encounters. | 1468767643
+Reset at Nidoran grass | 0:06:35 |  Took too long to catch Nidoran. | 1468767701
+Reset at Pallet Rival | 0:02:13 |  Bad Squirtle - 10 attack, 11 special. | 1468767764
+Reset at Viridian Forest | 0:08:46 |  Critical'd. | 1468767789
+Reset at Pallet Rival | 0:01:40 |  Growled to death. | 1468767868
+Reset at Nidoran grass | 0:06:37 |  Took too long to catch Nidoran. | 1468767888
+Reset at Pallet Town | 0:05:23 |  Too many encounters. | 1468767949
+Reset at Brock's Gym | 0:11:03 |  Bad Nidoran - unrunnable speed. | 1468768000
+Reset at Pallet Rival | 0:01:43 |  Growled to death. | 1468768100
+Reset at Brock's Gym | 0:11:26 |  Bad Nidoran - let's just forget this ever happened. | 1468768121
+Reset at Pallet Rival | 0:02:04 |  Died. | 1468768222
+Reset at Nidoran grass | 0:06:24 |  Took too long to catch Nidoran. | 1468768246
+Reset at Nidoran grass | 0:06:38 |  Took too long to catch Nidoran. | 1468768306
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468768368
+Reset at Pallet Rival | 0:01:55 |  Growled to death. | 1468768393
+Reset at Pallet Town | 0:05:14 |  Too many encounters. | 1468768416
+Reset at Brock's Gym | 0:11:01 |  Bad Nidoran - unrunnable attack. | 1468768467
+Reset at Nidoran grass | 0:06:25 |  Took too long to catch Nidoran. | 1468768564
+Reset at Nidoran grass | 0:06:14 |  Ran too low on Pokeballs. | 1468768624
+Reset at Brock's Gym | 0:10:56 |  Bad Nidoran - unrunnable attack. | 1468768682
+Reset at Brock's Gym | 0:10:55 |  Bad Nidoran - unrunnable attack, unrunnable speed. | 1468768781
+Reset at Brock's Gym | 0:11:13 |  Bad Nidoran - unrunnable special. | 1468768879
+Reset at Nidoran grass | 0:06:21 |  Ran too low on Pokeballs. | 1468768981
+Reset at Nidoran grass | 0:06:24 |  Took too long to catch Nidoran. | 1468769040
+Reset at Nidoran grass | 0:06:20 |  Took too long to catch Nidoran. | 1468769100
+Reset at Brock's Gym | 0:10:54 |  Bad Nidoran - unrunnable speed, unrunnable special. | 1468769160
+Reset at Pallet Rival | 0:02:14 |  Took too long to beat Bulbasaur. | 1468769258
+Reset at Nidoran grass | 0:06:55 |  Death by Rattata. | 1468769284
