@@ -199,6 +199,7 @@ function Utils.splitCheck()
 	if splitCheck == 600 then
 		local timediff = Utils.timeToSplit(order[splitNum])
 		if timediff >= 600 then
+			p("Something has gone wrong, Restarting... /n")
 			Strategies.reboot()
 		end
 		splitCheck = 0
