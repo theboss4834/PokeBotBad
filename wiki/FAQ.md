@@ -30,7 +30,7 @@
 
 **6. Why does it take a strange path through Viridian Forest?**
 
-  Many encounters in the forest actually can't give encounters, so it stays on these as much as possible. Therefore, an average Forest will only have 0-1 encounters.
+  Many tiles in the forest actually can't give encounters, so it stays on these as much as possible. Therefore, an average Forest will only have 0-1 encounters.
 
 **7. Why does the bot use the Center at full HP?**
 
