@@ -2259,7 +2259,7 @@ Strategies.functions = {
 			elseif status.frames == 500 then
 				Bridge.chat("beat the game in "..status.finishTime.."!")
 			elseif status.frames > 1800 then
-				return Strategies.hardReset("won", "Back to the grind - you can follow on Twitter for updates on our next good run! https://twitter.com/thepokebot")
+				return Strategies.hardReset("won", "Finished the game in "..Utils.elapsedTime()..", Dont forget to follow the stream!")
 			end
 			status.frames = status.frames + 1
 		elseif Memory.value("menu", "shop_current") == 252 then

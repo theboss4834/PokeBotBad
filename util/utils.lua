@@ -188,14 +188,18 @@ function Utils.elapsedTime()
 end
 
 function Utils.timeToSplit(splitName)
-	local currTime = Utils.igt()
-	local splitTime = Strategies.getTimeRequirement(splitName) * 60
-	local diff = currTime - splitTime
-	return diff
+	if splitName == nil then
+		return 0
+	else
+		local currTime = Utils.igt()
+		local splitTime = Strategies.getTimeRequirement(splitName) * 60
+		local diff = currTime - splitTime
+		return diff
+	end
 end
 
 function Utils.splitCheck()
-	local order = { "bulbasaur", "nidoran", "brock", "route3", "mt_moon", "mankey", "misty", "trash", "safari_carbos", "safari_carbos" , "safari_carbos", "victory_road", "victory_road", "victory_road", "victory_road", "victory_road", "e4center", "blue", "blue", "blue", "champion" }
+	local order = { "bulbasaur", "nidoran", "brock", "route3", "mt_moon", "mankey", "misty", "trash", "safari_carbos", "safari_carbos" , "safari_carbos", "victory_road", "victory_road", "victory_road", "victory_road", "victory_road", "e4center", "blue", "blue", "blue", "champion", "champion" }
 	if splitCheck == 600 then
 		local timediff = Utils.timeToSplit(order[splitNum])
 		if timediff >= 600 then
