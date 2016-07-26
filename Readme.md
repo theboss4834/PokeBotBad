@@ -41,7 +41,7 @@ Kyle Coburn: Original concept, Red/Yellow routing
 
 Michael Jondahl: Combat algorithm, Java bridge for Twitch chat/responders, LiveSplit, DB, Twitter, etc.
 
-Rhys Jones: Maintaing and updated bot to work with Bizhawk verson higher than 1.6
+Rhys Jones: Maintaing and updated bot to work with Bizhawk version higher than 1.6
 
 ### Special thanks
 
