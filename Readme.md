@@ -6,38 +6,20 @@ An automated computer program that speedruns Pokémon generation 1 games.
 
 Pokémon Red (Any% Glitchless) personal best runs:
 
-* [1:50:14](https://www.youtube.com/watch?v=lVE_ksd4WJw) (13 April 2015)
-* [1:51:11](https://www.youtube.com/watch?v=M4pOlQ-mIoc) (23 June 2014)
-* [1:56:45](https://youtu.be/yh3hI2xNvh4) (7 May 2014)
+* [1:48:56](https://secure.twitch.tv/pokespeedrunbots/v/78433035) (16 July 2016)
+* [1:50:15](https://www.twitch.tv/pokespeedrunbots/v/41012048) (10 Match 2015)
 
-Pokémon Yellow (Any% Glitchless) personal best runs:
-* [1:56:55](https://youtu.be/OgybaUCwQI0) (6 May 2015)
-* [2:00:03](https://youtu.be/bGedRUr6ZXc) (3 May 2015)
 
 
 ## Watch live
 
-### [twitch.tv/thepokebot](http://www.twitch.tv/thepokebot)
+### [twitch.tv/thepokebot](https://www.twitch.tv/pokespeedrunbots/)
 
-PokéBot’s official streaming channel on Twitch. Consider following there to find out when we’re streaming, or follow the [Twitter feed](https://twitter.com/thepokebot) for announcements when we get personal best pace runs going.
+PokéBot’s Unofficial streaming channel on Twitch. Consider following there to find out when we’re streaming.
 
 ### Run the bot locally
 
-Running the PokéBot on your own machine is easy. You will need a Windows environment (it runs great in VMs on Mac/Linux too).
-
-1. [Download the latest version](https://github.com/kylecoburn/PokeBot/releases) of PokéBot, and unzip it to your computer.
-
-2. Download the [BizHawk 1.6.1](http://sourceforge.net/projects/bizhawk/files/BizHawk/BizHawk-1.6.1.zip/download) emulator and extract the ZIP file anywhere you like to “install” it.
-
-3. Run [the BizHawk prerequisites installer](http://sourceforge.net/projects/bizhawk/files/Prerequisites/bizhawk_prereqs_v1.1.zip/download), which should update a C++ distributable needed by BizHawk.
-
-4. Procure a ROM file of Pokémon Red or Yellow (you should own the game).
-
-5. Open BizHawk.exe, then drag your ROM file onto the window, and the game should start up.
-
-6. By default, the bot completes every run it can, without resetting if it gets too far behind its best run time. Set [`RESET_FOR_TIME` in `main.lua`](https://github.com/kylecoburn/PokeBot/blob/v1.4.4/main.lua#L3) to `true` instead of `false` to reset more aggressively, i.e. if you’re trying to get a new record.
-
-7. Under the _Tools_ menu, select _Lua Console_. Press the “open folder” button, and navigate to the PokéBot folder you downloaded. Select `main.lua` and press “open”. The bot should start running!
+Follow this tutorial by Monk Preston : [Click here](http://imgur.com/a/cbHWb)
 
 ## Seeds
 
@@ -58,6 +40,8 @@ If you're interested in adapting the bot to other categories or games, we'd love
 Kyle Coburn: Original concept, Red/Yellow routing
 
 Michael Jondahl: Combat algorithm, Java bridge for Twitch chat/responders, LiveSplit, DB, Twitter, etc.
+
+Rhys Jones: Maintaing and updated bot to work with Bizhawk verson higher than 1.6
 
 ### Special thanks
 
