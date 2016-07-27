@@ -26,5 +26,5 @@ Chance of a **15 attack, 15 speed** Nidoran: 6/16 x 4/16 x 12/16 = 7.03125%
 
 Summed together gives us our chances of an acceptable Nidoran: 21.6796875% ≈ **22%**
 
-Please refer to the [DV chart](https://github.com/kylecoburn/PokeBot/blob/master/wiki/NidoranStats.md) for probability derivations.
+Please refer to the [DV chart](https://github.com/jonese1234/PokeBotBad/blob/master/wiki/NidoranStats.md) for probability derivations.
 
