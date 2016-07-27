@@ -10,9 +10,9 @@ The maximum stats at level 8 are **27** HP, **16** attack, **14** defense, **15*
 
 ### Requirements
 
-#### [Pokémon Red](https://github.com/kylecoburn/PokeBot/blob/master/wiki/red/Stats.md)
+#### [Pokémon Red](https://github.com/jonese1234/PokeBotBad/blob/master/wiki/red/Stats.md)
 
-#### [Pokémon Yellow](https://github.com/kylecoburn/PokeBot/blob/master/wiki/yellow/Stats.md)
+#### [Pokémon Yellow](https://github.com/jonese1234/PokeBotBad/blob/master/wiki/yellow/Stats.md)
 
 ### DV Charts
 

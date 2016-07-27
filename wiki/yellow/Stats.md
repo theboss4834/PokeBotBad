@@ -14,4 +14,4 @@ The following is the probability of a Nidoran stats being acceptable at level 8.
 
 Chance of a **15+ attack, 14+ speed, 12+ special** Nidoran: 11/16 x 10/16 x 12/16 = 0.322265625 ≈ **32%**
 
-Please refer to the [DV chart](https://github.com/kylecoburn/PokeBot/blob/master/wiki/NidoranStats.md) for probability derivations.
+Please refer to the [DV chart](https://github.com/jonese1234/PokeBotBad/blob/master/wiki/NidoranStats.md) for probability derivations.
