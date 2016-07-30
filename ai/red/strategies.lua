@@ -498,7 +498,7 @@ strategyFunctions.fightBrock = function()
 			Inventory.use("potion", "squirtle", true)
 		else
 			local bideTurns = Memory.value("battle", "opponent_bide")
-			if Menu.hasTextbox() and Menu.getCol() == 1 then
+			if Menu.hasTextbox() or Menu.getCol() == 1 then
 				Input.press("A")
 			elseif bideTurns > 0 then
 				local onixHP = Memory.double("battle", "opponent_hp")
