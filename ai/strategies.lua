@@ -370,8 +370,8 @@ function Strategies.completedMenuFor(data)
 end
 
 function Strategies.closeMenuFor(data)
-	if data.chain or (not status.menuOpened and not data.close) then
-		if Menu.onPokemonSelect() or Menu.hasTextbox() then
+	if data.chain then
+		if Menu.onPokemonSelect() or Menu.canCloseMessage() then
 			Input.press("B")
 			return false
 		end
@@ -388,7 +388,6 @@ function Strategies.useItem(data)
 		return Strategies.closeMenuFor(data)
 	end
 	if Menu.pause() then
-		status.menuOpened = true
 		Inventory.use(data.item, data.poke)
 	end
 end
@@ -819,7 +818,6 @@ Strategies.functions = {
 					if Menu.pause() then
 						status.didPotion = true
 						Inventory.use(toPotion)
-						status.menuOpened = true
 					end
 					return false
 				end
@@ -871,9 +869,7 @@ Strategies.functions = {
 				else
 					replacement = 0
 				end
-				if Inventory.teach(itemName, teachTo, replacement) then
-					status.menuOpened = true
-				else
+				if not Inventory.teach(itemName, teachTo, replacement) then
 					Menu.pause()
 				end
 			end
@@ -886,19 +882,18 @@ Strategies.functions = {
 	skill = function(data)
 		if completedSkillFor(data) then
 			if Data.yellow then
-				if not Menu.hasTextbox() then
+				-- TODO: should probably call Menu.hasTextbox() too
+				if not Menu.canCloseMessage() then
 					return true
 				end
-			else
-				if not Menu.isOpened() then
-					return true
-				end
+			elseif not Menu.hasTextbox() then
+				return true
 			end
 			Input.press("B")
 		elseif not data.dir or Player.face(data.dir) then
 			if Pokemon.use(data.move, Data.yellow) then
 				status.tries = status.tries + 1
-			elseif Data.yellow and Menu.hasTextbox() then
+			elseif Data.yellow and Menu.canCloseMessage() then
 				Textbox.handle()
 			else
 				Menu.pause()
@@ -1431,7 +1426,6 @@ Strategies.functions = {
 				end
 			elseif not Inventory.use("moon_stone") then
 				Menu.pause()
-				status.menuOpened = true
 			end
 		end
 	end,
@@ -1961,7 +1955,7 @@ Strategies.functions = {
 		if Battle.isActive() then
 			return true
 		end
-		if Menu.hasTextbox() then
+		if Menu.canCloseMessage() then
 			Input.cancel()
 		elseif Menu.pause() then
 			Inventory.use("pokeflute")
@@ -2032,9 +2026,10 @@ Strategies.functions = {
 		end
 	end,
 
+	-- TODO: allow chain, let the other call to item take care of carbos
 	tossInSafari = function()
 		if Inventory.count() <= (Inventory.contains("full_restore") and 18 or 17) then
-			return Strategies.closeMenuFor({close=true})
+			return Menu.close()
 		end
 		if Data.red and Inventory.contains("carbos") then
 			strategyFunctions.item({item="carbos",poke="nidoking",all=true})
@@ -2140,14 +2135,13 @@ Strategies.functions = {
 				return Strategies.useItem(data)
 			end
 			if Memory.value("menu", "main") == 144 and Menu.getCol() == 5 then
-				if Menu.hasTextbox() then
+				if Menu.canCloseMessage() then
 					Input.cancel()
 				else
 					Menu.select(Pokemon.battleMove("horn_drill"), true)
 				end
 			elseif Menu.pause() then
 				Inventory.use(status.item, "nidoking")
-				status.menuOpened = true
 			end
 		end
 	end,
