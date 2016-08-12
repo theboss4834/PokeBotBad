@@ -1654,12 +1654,17 @@ Strategies.functions = {
 				message = "ran too low on potions to adequately heal before Misty D:"
 			elseif healAmount < 60 then
 				message = "is limiting heals to attempt to get closer to red-bar off Misty..."
-			elseif isSpeedTie then
+			end
+			if message then
+				Bridge.chat(message, false, potionCount)
+				message = nil
+			end
+			if isSpeedTie then
 				message = "will need to get lucky with speed ties to beat Misty here..."
 			elseif not outspeeds then
-				message = "will need to get lucky to beat Misty here. We're outsped..."
+				message = "will need to get lucky to beat Misty here. We're outspeed..."
 			elseif not canTwoHit then
-				message = "will need to get lucky with damage ranges to beat Misty here..."
+				message = "will need to get lucky with our damage ranges to beat Misty here..."
 			end
 			if message then
 				Bridge.chat(message, false, potionCount)
