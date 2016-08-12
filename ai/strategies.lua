@@ -1079,9 +1079,12 @@ Strategies.functions = {
 		return Strategies.useItem(data)
 	end,
 
-	speedchange = function(data)
-		p(data.extra..", speed changed to "..data.speed.."%")
-		client.speedmode(data.speed)
+	changeSpeed = function(data)
+		if CURRENT_SPEED ~= data.speed then
+			print(data.extra..", speed changed to "..data.speed.."%")
+			client.speedmode(data.speed)
+			CURRENT_SPEED = data.speed
+		end
 		return true
 	end,
 
