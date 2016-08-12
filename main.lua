@@ -6,7 +6,8 @@ BEAST_MODE = false -- WARNING: Do not engage. Will yolo everything, and reset at
 INITIAL_SPEED = 750
 AFTER_BROCK_SPEED = 350
 
-RUNS_FILE = "./wiki/red/runs.txt" -- Use / insted of \ otherwise it will not work
+RESET_LOG = "./wiki/red/resets.txt"
+VICTORY_LOG = "./wiki/red/victories.txt"
 
 local CUSTOM_SEED  = nil -- Set to a known seed to replay it, or leave nil for random runs
 local NIDORAN_NAME = "A" -- Set this to the single character to name Nidoran (note, to replay a seed, it MUST match!)
