@@ -3,10 +3,13 @@
 RESET_FOR_TIME = false -- Set to true if you're trying to break the record, not just finish a run
 BEAST_MODE = false -- WARNING: Do not engage. Will yolo everything, and reset at every opportunity in the quest for 1:47.
 
-INITIAL_SPEED = 750
-AFTER_BROCK_SPEED = 350
+INITIAL_SPEED = 1500
+AFTER_BROCK_SPEED = 1500
+AFTER_MOON_SPEED = 500
+E4_SPEED = 200
 
-RUNS_FILE = "C:/Users/rjrhy/Desktop/Pokebot/Github work/PokeBotBad/wiki/red/runs.txt" -- Use / insted of \ otherwise it will not work
+RESET_LOG = "./wiki/red/resets.txt"
+VICTORY_LOG = "./wiki/red/victories.txt"
 
 local CUSTOM_SEED  = nil -- Set to a known seed to replay it, or leave nil for random runs
 local NIDORAN_NAME = "A" -- Set this to the single character to name Nidoran (note, to replay a seed, it MUST match!)
@@ -15,6 +18,7 @@ local PAINT_ON     = true -- Display contextual information while the bot runs
 -- START CODE (hard hats on)
 
 VERSION = "2.4.8"
+CURRENT_SPEED = nil
 
 local Data = require "data.data"
 
@@ -54,7 +58,9 @@ function resetAll()
 	Utils.reset()
 	oldSeconds = 0
 	running = false
-	client.speedmode(INITIAL_SPEED)
+	
+	CURRENT_SPEED = INITIAL_SPEED
+  	client.speedmode(INITIAL_SPEED)
 
 	if CUSTOM_SEED then
 		Data.run.seed = CUSTOM_SEED
