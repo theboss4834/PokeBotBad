@@ -1470,6 +1470,7 @@ strategyFunctions.fightKoga = function()
 					forced = "horn_drill"
 					Strategies.chat("drilling", "is at low enough HP to try Horn Drill on Weezing")
 					Control.ignoreMiss = true
+					Control.canDie(true)
 				elseif Battle.opponentDamaged(2) then
 					Inventory.use("pokeflute", nil, true)
 					return false
