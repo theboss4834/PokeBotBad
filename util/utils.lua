@@ -188,7 +188,7 @@ function Utils.elapsedTime()
 end
 
 function Utils.timeToSplit(splitName)
-	if splitName == nil then
+	if splitName.value == nil then
 		return 0
 	else
 		local currTime = Utils.igt()
